@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="#00bbff"/>
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar">
+        <!--Content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="56dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="KIỂM TRA NGAY"
+                android:drawablePadding="0dp"
+                android:drawableLeft="@android:drawable/checkbox_on_background"
+                android:textSize="24sp"/>
+
+            <Button
+                android:id="@+id/btnRank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="RANK"
+                android:drawablePadding="0dp"
+                android:drawableLeft="@android:drawable/btn_star_big_on"
+                android:textSize="24sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"/>
+
+            <Button
+                android:id="@+id/btnAbount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:drawableLeft="@android:drawable/btn_plus"
+                android:text="ABOUNT"
+                android:gravity="center_vertical"
+
+                android:drawablePadding="0dp"
+
+                android:layout_marginBottom="24dp"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+        <!-- Navigation Drawer-->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/menu_nav_drawer"
+            android:layout_gravity="left"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

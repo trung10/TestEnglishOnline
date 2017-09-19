@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <ImageButton
+                android:id="@+id/btn_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_action_name"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/txtvSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                android:textSize="24sp"
+                android:textColor="#8ae9c9"
+                android:layout_marginEnd="30dp"
+                android:layout_alignTop="@+id/btn_Back"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/txtTittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entry Test"
+                android:layout_alignTop="@+id/txtvSkip"
+                android:layout_centerHorizontal="true"
+                android:textSize="24sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:id="@+id/linearLayout2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <android.support.v7.widget.AppCompatTextView
+                  android:id="@+id/btnQuizNumber"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="1/10"
+                  android:textSize="29sp"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentStart="true" />
+
+
+               <com.triggertrap.seekarc.SeekArc
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/seekArcWarning"
+                    android:padding="16dp"
+                    app:enabled="false"
+                    app:progress="10"
+                    app:max="300"
+                    app:arcWidth="3dp"
+                    app:clockwise="true"
+                    app:progressWidth="3dp"
+                    app:rotation="180"
+                    app:roundEdges="true"
+                    app:startAngle="180"
+                    app:sweepAngle="360" />
+
+                <TextView
+                    android:id="@+id/txtvProcess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="30"
+                    android:textSize="30sp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabWarning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.30"
+                    android:visibility="visible"
+                    app:elevation="0dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txtvQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="What your name?"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbtnA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/yourbuttonbackground"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@drawable/yourbuttonbackground"
+                android:textColor="@android:color/black"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@drawable/yourbuttonbackground"
+                android:textColor="@android:color/black"
+                />
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
