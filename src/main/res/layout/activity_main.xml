@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="?attr/colorBackgroundFloating" />
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar">
+        <!--Content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo2_300"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btnQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:drawableLeft="@android:drawable/checkbox_on_background"
+                android:drawablePadding="0dp"
+                android:padding="16dp"
+                android:text="START"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp" />
+
+            <Button
+                android:id="@+id/btnAbount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/buttonshape"
+                android:padding="16dp"
+                android:text="ABOUT"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <!-- Navigation Drawer-->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            app:menu="@menu/menu_nav_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

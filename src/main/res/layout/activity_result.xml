@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.trung.testenglishonline.ResultActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageButton
+                android:id="@+id/btnBackR"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_action_name"
+                android:backgroundTint="#303030"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Your Score"
+                android:textSize="30sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView3" />
+
+            <ImageButton
+                android:id="@+id/btnRestart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_rotate"
+                android:layout_alignTop="@+id/textView3"
+                android:backgroundTint="#303030"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+
+            <com.triggertrap.seekarc.SeekArc
+                android:id="@+id/seekArc"
+                android:layout_centerHorizontal="true"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:padding="16dp"
+                app:enabled="false"
+                app:progress="1"
+                app:max="10"
+                app:arcWidth="10dp"
+                app:clockwise="true"
+                app:progressWidth="10dp"
+                app:rotation="180"
+                app:roundEdges="true"
+                app:startAngle="270"
+                app:sweepAngle="360"
+                />
+
+            <TextView
+                android:id="@+id/txtvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/10"
+                android:textSize="70sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
